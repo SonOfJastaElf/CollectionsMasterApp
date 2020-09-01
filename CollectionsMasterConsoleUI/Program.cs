@@ -94,11 +94,11 @@ namespace CollectionsMasterConsoleUI
 
         private static void OddKiller(List<int> numberList)
         {
-            foreach (var num in numberList)
+            for (int i = 0; i < numberList.Count; i++)
             {
-                if (num % 2 != 0)
+                if (numberList[i] % 2 != 0)
                 {
-                    numberList.Remove(num);
+                    numberList.Remove(numberList[i]);
                 }
             }
         }
@@ -107,11 +107,11 @@ namespace CollectionsMasterConsoleUI
         {
             if (numberList.Contains(searchNumber))
             {
-                Console.WriteLine("\n Found it! \n");
+                Console.WriteLine("Found it!");
             }
             else
             {
-                Console.WriteLine("That number is not on this list");
+                Console.WriteLine("I don't see it...");
             }
         }
 
